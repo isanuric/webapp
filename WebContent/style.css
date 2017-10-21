@@ -1,0 +1,8 @@
+@charset "UTF-8";
+
+body{ background-color: #c2c1c3;}
+
+td {
+	width: 150px;
+	text-align: center;
+}
