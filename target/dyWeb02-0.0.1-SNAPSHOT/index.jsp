@@ -12,19 +12,24 @@
 	<body>		
 		<form action="HelloServlet">		
 		<table>
+		<tr><td>	</td></tr>
+		<tr></tr>
+		<tr></tr>
+		<tr></tr>
 			<tr>
 				<td>user name: </td>
 				<td><input type="text" name="uid"></td>
 			</tr>
 			<tr>
 				<td> password: </td>
-				<td><input type="password" name="pass"></td>
+				<td><input type="text" name="pass"></td>
 			</tr>
 			<tr>
 				<td></td>
 				<td><input type="submit" name="submintBtn">	</td>
 			</tr>
-		</table>				
+		</table>	
+				
 		</form>		
 	</body>	
 </html>
