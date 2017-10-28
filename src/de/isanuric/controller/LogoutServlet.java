@@ -1,4 +1,4 @@
-package de.isanuric.webs;
+package de.isanuric.controller;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
