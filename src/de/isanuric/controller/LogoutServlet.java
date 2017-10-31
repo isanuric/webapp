@@ -15,7 +15,6 @@ import javax.servlet.http.HttpSession;
 public class LogoutServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
@@ -23,7 +22,7 @@ public class LogoutServlet extends HttpServlet {
 		HttpSession session = request.getSession();
 		session.removeAttribute("uid");
 		session.invalidate();
-		response.sendRedirect("index.jsp");
+		response.sendRedirect("login.jsp");
 	}
 
 

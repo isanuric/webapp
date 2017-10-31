@@ -16,19 +16,14 @@ import de.isanuric.model.LoginDB;
 public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private boolean firstCall = true;
-	
-	
 
 	/* (non-Javadoc)
 	 * @see javax.servlet.GenericServlet#init()
 	 */
 	@Override
 	public void init() throws ServletException {
-		// TODO Auto-generated method stub
 		super.init();
 	}
-
-
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	     //reading the user input
@@ -44,21 +39,19 @@ public class LoginServlet extends HttpServlet {
 	    		session.setAttribute("uid", uid);
 	    		response.sendRedirect("welcome.jsp");
 	    }else {
-	    		
 	    	
 				if (!firstCall) {
 					RequestDispatcher requestDispatcher;
 					request.setAttribute("errorMessage", loginDb.getLoginMessage());
-					requestDispatcher = request.getRequestDispatcher("index.jsp");
+					requestDispatcher = request.getRequestDispatcher("login.jsp");
 					requestDispatcher.forward(request, response);
 				}else {
 					firstCall = false;
 //					request.setAttribute("errorMessage", "login");
 //					requestDispatcher = request.getRequestDispatcher("index.jsp");
 //					requestDispatcher.forward(request, response);
-					response.sendRedirect("index.jsp");
+					response.sendRedirect("login.jsp");
 				}
-
 	    }
 	    
 //	    PrintWriter out = response.getWriter();

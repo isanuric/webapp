@@ -18,7 +18,7 @@
 		Helper.dontAllowBack(request, response);
 	
 		if (session.getAttribute("uid") == null) {
-			response.sendRedirect("index.jsp");
+			response.sendRedirect("login.jsp");
 		}
 	%>
 	
